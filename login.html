@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #ff0000;
+            font-size: 48px;
+            font-style: italic;
+            text-shadow: 2px 2px 4px #000000;
+            font-family: "Times New Roman", serif;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #0000ff;
+            font-size: 20px;
+        }
+
+        .input-group input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: "Courier New", monospace;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .error {
+            color: #ff0000;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+    </style>
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorElement = document.getElementById("error-msg");
+
+        if (username === "admin" && password === "12345678") {
+            window.location.href = "adminhome.html";
+            return false;
+        } else if (username === "emad" && password === "emad2050e") {
+            window.location.href = "emadtestwep.html";
+            return false;
+        } else {
+            errorElement.textContent = "اسم المستخدم أو كلمة المرور غير صحيحة.";
+            return false;
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>(مبرمج و منشئ الموقع) EMAD ملاحظة: لكي تستعمل هذا الخيار يجب أن يكون لديك اسم المستخدم وكلمة المرور الذي أعطاك هي </h2>     
+    <h1>EMAD</h1>
+    <form onsubmit="return validateForm()">
+        <div class="input-group">
+            <label for="username">اسم المستخدم:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <p class="error" id="error-msg"></p>
+        <button class="button" type="submit">تسجيل الدخول</button>
+    </form>
+</body>
+</html>

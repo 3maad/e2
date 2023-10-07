@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>حل المسألة الرياضية</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: sans-serif;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+
+<body>
+    <h1>حل المسألة الرياضية</h1>
+    <div class="input-group">
+        <label for="math-problem">أدخل المسألة الرياضية:</label>
+        <input type="text" id="math-problem" required>
+    </div>
+    <button class="button" id="solve-button">حل المسألة</button>
+    <p class="result" id="result"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.js"></script>
+    <script src="math.js"></script>
+</body>
+</html>
